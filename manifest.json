@@ -1,14 +1,17 @@
 {
   "manifest_version": 2,
-  "name": "Плагин",
+  "name": "My Extension",
   "version": "1.0",
-  "description": "Описание плагина",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content_script.js"]
+    }
+  ],
   "permissions": [
     "webRequest",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "*://*/*"
   ],
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": true
-  }
+  "manifest_version": 2
 }
