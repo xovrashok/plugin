@@ -2,7 +2,7 @@ const scriptTag = document.createElement("script");
 document.head.appendChild(scriptTag);
 
 scriptTag.onload = function () {
-  const apiKey = "0dc13a497a3ee3852095213deb19437a";
+  const apiKey = "YOUR_API_KEY";
   const solver = new Captcha.Solver(apiKey);
 
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
