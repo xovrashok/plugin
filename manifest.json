@@ -9,9 +9,16 @@
     }
   ],
   "permissions": [
+    "tabs",
+    "activeTab",
     "webRequest",
     "webRequestBlocking",
-    "*://*/*"
+    "https://unpkg.com/",
+    "https://www.google.com/recaptcha/"
   ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self'",
   "manifest_version": 2
 }
